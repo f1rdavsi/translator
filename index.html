@@ -1,0 +1,1059 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <style>
+body {
+    position: absolute;
+    background: url(img/background.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+.fixed-size {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    box-sizing: border-box; 
+}
+.rectangle {
+    position: absolute;
+	font-family: sans-serif; 
+    color: #000000; 
+    font-size: 36px;
+    width: 30%;
+    top: 0%;
+    left: 50%;
+    padding: 1px;
+    border: 25px solid #ffffff;
+    background: #ffffff;
+    font: #000000;
+    text-align: center;
+    line-height: 5vh;
+    border-radius: 75px;
+    transform: translate(-50%);
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 24;
+    height: 33%;
+    line-height: 33px;
+    padding: 8px 8px 7px;
+    top: 30%;
+    border-radius: 30px;
+    border-width: 1;
+    max-width: 35%;
+    font-family: verdana;
+    min-width: 35%;
+    max-height: 66%;
+    resize: none;
+    box-sizing: content-box;
+}
+.textbox1 {
+    left: 4%;
+}
+.textbox2 {
+    right: 4%;
+}
+.button1 {
+    top: 38%;
+    
+}
+.button2 {
+    top: 47%;
+    
+}
+.button3 {
+    top: 56%;
+    
+}
+.button4{
+    left: 7%;
+   
+    
+}
+.button5{
+    left: 63%;
+}
+
+.button1, .button2, .button3 {
+    display: grid;
+    place-items: center;
+	font-family: sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    line-height: 1.25;
+    background: #024fd4;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    width: 15em;
+    height: 3.3em;
+    transform: translate(-50%, -50%);
+    
+}
+.button4, .button5{
+    
+    display: grid;
+    place-items: center;
+	font-family: sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    line-height: 1.25;
+    background: #024fd4;
+    text-decoration: none;
+    color: rgb(247, 247, 247);
+    font-size: 16px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    position: absolute; 
+    z-index: 2;
+    overflow: hidden;
+    top: 60%;
+    width: 2.5em;
+    height: 2.5em;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    fill:#e8dfdf;
+}
+.button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover {
+    background-color: #1307b3;
+    transition: 0.7s;
+}
+
+.blue, .red, .green, .yellow, .purple, .black {
+    font-family: sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    color: rgb(247, 247, 247);
+    border-radius: 10px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    line-height: 1.25;
+    text-decoration: none;
+    letter-spacing: .08em;
+    z-index: 2;
+    overflow: hidden;
+    width: 25em;
+    height: 3.8em;
+    transform: translate(-50%, -50%);
+    }
+.blue{
+    background: #024fd4;
+    top: 35px;
+    left: 53%;
+} 
+.red{
+    background: #ba0e0e;
+    top: 45px;
+    left: 53%;
+} 
+.green{
+    background: #0a510c;
+    top: 55px;
+    left: 53%;
+} 
+.yellow{
+    background: #e3a600;
+    top: 65px;
+    left: 53%;
+} 
+.purple{
+    background: #58099d ;
+    top: 75px;
+    left: 53%;
+} 
+.black{
+    background: #000000;
+    top: 85px;
+    left: 53%;
+} 
+  
+
+.rus, .eng, .deut, .esp, .turk, .arab {
+    font-family: sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    color: rgb(247, 247, 247);
+    border-radius: 10px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    line-height: 1.25;
+    text-decoration: none;
+    letter-spacing: .08em;
+    z-index: 2;
+    overflow: hidden;
+    width: 25em;
+    height: 3.8em;
+    transform: translate(-50%, -50%);
+    background: #024fd4;
+    }
+
+.rus{
+    top: 35px;
+    left: 53%;
+} 
+.eng{
+    top: 45px;
+    left: 53%;
+} 
+.deut{
+    top: 55px;
+    left: 53%;
+} 
+.esp{
+    top: 65px;
+    left: 53%;
+} 
+.turk{
+    top: 75px;
+    left: 53%;
+} 
+.arab{
+    top: 85px;
+    left: 53%;
+} 
+
+#menu {
+    right: 0;
+    top: 0;
+    position: absolute;
+    list-style: none;
+    width: 150px;
+    margin: 0px 0px 0px 300px;
+    height: 43px;
+    padding: 0px 0px 0px 0px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #024fd4;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+#menu:hover {
+    background-color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000;
+}
+#menu li {
+    float: left;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    padding: 4px 10px 4px 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 7px;
+    margin-bottom: 12px;
+    border: none;
+
+}
+
+#menu li a {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #EEEEEE;
+    display: block;
+    outline: 0;
+}
+
+#menu li .drop {
+    padding-left: 21px;
+    background: url("img/drop.png") no-repeat left 3px;
+    margin-bottom: 6px;
+}
+.lang, .colbut, .background{
+    background: url("img/drop.png") no-repeat left 3px;
+    margin-bottom: 6px;
+    background: #024fd4;
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #000;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    color: rgb(223, 221, 221);
+    font-size: 16px;    
+    text-transform: uppercase;
+    overflow: hidden;
+    
+    
+}
+
+.lang:hover {
+    background-color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000;
+}
+.colbut:hover {
+    background-color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000;
+}
+.background:hover {
+    background-color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.dropdown_5columns {
+	margin: 4px 2px;
+	float: left;
+	position: absolute;
+	left: -999em;
+	text-align: left;
+	padding: 10px 5px 10px 5px;
+	border: 1px solid #777777;
+	border-top: none;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #EEEEEE, #e4e4e4);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEEEEE), to(#e4e4e4));
+	border-radius: 0px 5px 5px 5px;
+    width: 137px;
+}
+#menu:hover .dropdown_5columns {
+	left: -1px;
+	top: auto;
+}
+.col_1,
+.col_5, .col_6, .col_7 {
+	display: inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.col_1 { width: 130px; }
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 21px;
+	font-size: 12px;
+	text-align: left;
+	text-shadow: 1px 1px 1px #FFFFFF;
+    font-size: 21px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	margin: 7px 0 14px 0;
+	padding-bottom: 14px;
+	border-bottom: 1px solid #666666;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 21px;
+	font-size: 12px;
+	text-align: left;
+	text-shadow: 1px 1px 1px #FFFFFF;
+    font-size: 21px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	margin: 7px 0 14px 0;
+}
+.img {
+	background: #FFFFFF;
+	padding: 4px;
+	border: 1px solid #777777;
+	margin-top: 5px;
+	box-shadow: 0px 0px 5px #666666;
+    width: 100px;
+	float: left;
+	margin: 5px 15px 5px 5px;
+    height: 70;
+    cursor: pointer;
+}
+.dropdownbtn1, .dropdownbtn2, .dropdownbtn3{
+    font-family: sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+    border: none;
+    cursor: pointer;
+    list-style: none;
+    width: 14em;
+    height: 3.3em;
+    border-radius: 10px;
+    background: #024fd4;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+}
+
+
+
+.dropdown-list {
+    position: relative;
+	float: left;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid #777777;
+	border-top: none;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #EEEEEE, #e4e4e4);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEEEEE), to(#e4e4e4));
+	border-radius: 0px 5px 5px 5px;
+    list-style-type: none;
+    margin: 0;
+    opacity: 1;
+    z-index: 2;
+}
+ 
+
+.dropdown-list2 {
+    position: absolute;
+    height: 430px;
+    width: 420px;
+    right: 0;
+	float: right;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid #777777;
+	border-top: none;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #EEEEEE, #e4e4e4);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEEEEE), to(#e4e4e4));
+	border-radius: 0px 5px 5px 5px;
+    list-style-type: none;
+    margin: 220px 0px 0px 0px;
+    opacity: 1;
+    z-index: 3;
+}   
+
+.dropdown-list2:hover .dropdown_5columns {
+	left: -1px;
+	top: auto;
+
+}
+.dropdown-list li {
+    float: left;
+    text-align: center;
+    padding: 11px 10px 18px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+}
+.dropdown-list li:hover {
+    background-color: #bebebe;
+    transition: 0.7s;
+    cursor: pointer;
+}
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.dropdown-container, .dropdown-container2, .dropdown-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 20%;
+}
+.dropdown-container {
+    left: 8%;
+    max-width: 20em;
+}
+.dropdown-container2 {
+    right: 15%;
+    max-width: 20em;
+}
+.dropdown-container3 {
+    top:0;
+    right: 33;
+    max-width: 10em;
+    align-items: center;
+}
+.dropdown-container4 {
+    top:0;
+    right: 33;
+    max-width: 10em;
+    align-items: center;
+}
+
+.languagebutton1, .languagebutton2, .languagebutton3, .languagebutton4, .languagebutton5, .languagebutton6, .languagebutton7,.languagebutton8,.languagebutton9,.languagebutton10,.languagebutton11,.languagebutton12 {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 21px;
+	font-size: 12px;
+	text-align: left;
+	text-shadow: 1px 1px 1px #FFFFFF;
+    font-size: 21px;
+	font-weight: 400;
+	letter-spacing: -1px;
+}
+
+.languagebutton:hover {
+  background-color: #ddd; /* Цвет фона при наведении */
+}
+</style>
+
+<title>Переводчик</title>
+</head>
+<body bgcolor=White>
+<div style="position: absolute;">
+    <img src="img/guu.png" width="200" height="100" data-width="200">
+</div>
+
+
+
+    <div class="dropdown-container">
+        <button id="dropdownbtn1" class="dropdownbtn1" onclick="toggleDropdown('dropdown-list')">Русский</button>
+        <ul id="dropdown-list" class="dropdown-list hidden">
+          <li class="languagebutton1" onclick="changeLanguageFrom('en'); selectItem(this, 'dropdownbtn1', 'dropdown-list')">Английский</li>
+          <li class="languagebutton2" onclick="changeLanguageFrom('ru'); selectItem(this, 'dropdownbtn1', 'dropdown-list')">Русский</li>
+          <li class="languagebutton3" onclick="changeLanguageFrom('es'); selectItem(this, 'dropdownbtn1', 'dropdown-list')">Испанский
+          </li>
+          <li class="languagebutton4" onclick="changeLanguageFrom('de'); selectItem(this, 'dropdownbtn1', 'dropdown-list')">Немецкий</li>
+          </li>
+          <li class="languagebutton5" onclick="changeLanguageFrom('tr'); selectItem(this, 'dropdownbtn1', 'dropdown-list')">Турецкий</li>
+          </li>
+          <li class="languagebutton6" onclick="changeLanguageFrom('ar'); selectItem(this, 'dropdownbtn1', 'dropdown-list')">Арабский</li>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown-container2">
+        <button id="dropdownbtn2" class="dropdownbtn2" onclick="toggleDropdown('dropdown-list2')">Английский</button>
+        <ul id="dropdown-list2" class="dropdown-list hidden">
+            <li class="languagebutton7" onclick="changeLanguageTo('en'); selectItem(this, 'dropdownbtn2', 'dropdown-list2')">Английский</li>
+            <li class="languagebutton8" onclick="changeLanguageTo('ru'); selectItem(this, 'dropdownbtn2', 'dropdown-list2')">Русский</li>
+            <li class="languagebutton9" onclick="changeLanguageTo('es'); selectItem(this, 'dropdownbtn2', 'dropdown-list2')">Испанский</li>
+        </li>
+            <li class="languagebutton10" onclick="changeLanguageTo('de'); selectItem(this, 'dropdownbtn2', 'dropdown-list2')">Немецкий</li>
+        </li>
+            <li class="languagebutton11" onclick="changeLanguageTo('tr'); selectItem(this, 'dropdownbtn2', 'dropdown-list2')">Турецкий</li>
+        </li>
+            <li class="languagebutton12" onclick="changeLanguageTo('ar'); selectItem(this, 'dropdownbtn2', 'dropdown-list2')">Арабский</li>
+          </li>
+        </ul>
+      </div>
+      
+      
+
+<div class = "dropdown-container3"><button id= "dropdownbtn3" class="dropdownbtn3" onclick="toggleDropdown('dropdown-list3')">Настройки</button>
+    <ul id="dropdown-list3" class="dropdown-list hidden">
+        <button class="lang" id= "dropdownbtn3" class="dropdown-btn" onclick="toggleDropdown('dropdown-list4')">Настройки языка</button>
+        <button class="colbut" id= "dropdownbtn3" class="dropdown-btn" onclick="toggleDropdown('dropdown-list5')">Настройки кнопок</button>
+        <button class="background" id= "dropdownbtn3" class="dropdown-btn" onclick="toggleDropdown('dropdown-list6')">Настройки фона</button>
+        </ul>
+        </div>
+        
+            
+                
+        
+    </li>
+</ul>
+<ul id="dropdown-list4" class="dropdown-list2 hidden">
+    <div class="col_5">
+        
+        <li class="rus">Русский</li>
+        <li class="eng">English</li>
+        <li class="deut">Deutsch</li>
+        <li class="esp">Español</li>
+        <li class="turk">Türk</li>
+        <li class="arab">العربية</li>
+</ul>
+
+<ul id="dropdown-list5" class="dropdown-list2 hidden">
+    <div class="col_6">
+        <li class="blue">Синий</li>
+        <li class="red">Красный</li>
+        <li class="green">Зеленый</li>
+        <li class="yellow">Желтый</li>
+        <li class="purple">Фиолетовый</li>
+        <li class="black">Чёрный</li>
+        </select>
+</ul>
+
+<ul id="dropdown-list6" class="dropdown-list2 hidden">
+    <div class="col_7">
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background.jpg)')">
+        <img src="img/background.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background1.jpg)')">
+        <img src="img/background1.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background2.jpg)')">
+        <img src="img/background2.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background3.jpg)')">
+        <img src="img/background3.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background4.jpg)')">
+        <img src="img/background4.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background5.jpg)')">
+        <img src="img/background5.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background6.jpg)')">
+        <img src="img/background6.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background7.jpg)')">
+        <img src="img/background7.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background8.jpg)')">
+        <img src="img/background8.jpg" class="img" />
+    </div>
+    <div class="col_1" onclick="changeBackground('url(img/background9.jpg)')">
+        <img src="img/background9.jpg" class="img" />
+    </div>
+</ul>
+
+<center><b><div class="rectangle">Перевод текста на другой язык</b></center>
+</div>
+    <textarea class="textbox1" id="textbox1" name="textbox2" rows="9" cols="90" placeholder="Введите текст для перевода"></textarea>
+    <a href="#" class="button1" id="button1">Начать запись</a>
+    <a href="#" class="button2" id="button2">Сменить язык</a>
+    <a href="#" class="button3" id="button3">Перевести</a>
+    <svg class="button4" id="button4" 
+    viewBox="0 0 492.308 492.308" xml:space="preserve">
+<g>
+   <g>
+       <path d="M125.762,139.214H29.538C13.25,139.214,0,152.464,0,168.752v154.813c0,16.288,13.25,29.538,29.539,29.538h96.237
+           L313.087,489.56V2.748L125.762,139.214z M119.13,333.411H29.538c-5.428,0-9.846-4.418-9.846-9.846V168.752
+           c0-5.428,4.418-9.846,9.846-9.846h89.591V333.411z M293.394,450.849L138.822,338.243V154.065L293.394,41.459V450.849z"/>
+   </g>
+</g>
+<g>
+   <g>
+       <path d="M425.692,85.099l-13.923,13.923c39.236,39.236,60.846,91.49,60.846,147.135c0,55.639-21.611,107.894-60.846,147.135
+           l13.923,13.923c42.957-42.957,66.615-100.154,66.615-161.058C492.308,185.252,468.649,128.055,425.692,85.099z"/>
+   </g>
+</g>
+<g>
+   <g>
+       <path d="M370.014,139.786l-13.923,13.923c50.976,50.976,50.976,133.918,0,184.894l13.923,13.923
+           C428.668,293.873,428.668,198.44,370.014,139.786z"/>
+   </g>
+</g>
+</svg>
+
+<svg class="button5" id="button5" 
+    viewBox="0 0 492.308 492.308" xml:space="preserve">
+<g>
+   <g>
+       <path d="M125.762,139.214H29.538C13.25,139.214,0,152.464,0,168.752v154.813c0,16.288,13.25,29.538,29.539,29.538h96.237
+           L313.087,489.56V2.748L125.762,139.214z M119.13,333.411H29.538c-5.428,0-9.846-4.418-9.846-9.846V168.752
+           c0-5.428,4.418-9.846,9.846-9.846h89.591V333.411z M293.394,450.849L138.822,338.243V154.065L293.394,41.459V450.849z"/>
+   </g>
+</g>
+<g>
+   <g>
+       <path d="M425.692,85.099l-13.923,13.923c39.236,39.236,60.846,91.49,60.846,147.135c0,55.639-21.611,107.894-60.846,147.135
+           l13.923,13.923c42.957-42.957,66.615-100.154,66.615-161.058C492.308,185.252,468.649,128.055,425.692,85.099z"/>
+   </g>
+</g>
+<g>
+   <g>
+       <path d="M370.014,139.786l-13.923,13.923c50.976,50.976,50.976,133.918,0,184.894l13.923,13.923
+           C428.668,293.873,428.668,198.44,370.014,139.786z"/>
+   </g>
+</g>
+</svg>
+    
+    <textarea class="textbox2" id="textbox2" name="textbox2" rows="9" cols="90" placeholder="Здесь будет отображаться перевод текста"></textarea><br>
+
+<script>
+    var langFrom = 'ru';
+    var langTo = 'en';
+    function changeLanguageFrom(lang){
+        if(langTo == lang){
+            changeLanguage();
+        }
+        else{
+            langFrom = lang;
+        }
+        translateText();
+    }
+    function changeLanguageTo(lang){
+        if(langFrom == lang){
+            changeLanguage();
+        }
+        else{
+            langTo = lang;
+        }
+        translateText();
+    }
+    function changeLanguage() {
+        var temp = langFrom;
+        langFrom = langTo;
+        langTo = temp;
+        const dropdownBtn = document.getElementById('dropdownbtn1');
+        const dropdownBtn2 = document.getElementById('dropdownbtn2');
+        var temp = dropdownBtn.textContent;
+        dropdownBtn.textContent = dropdownBtn2.textContent;
+        dropdownBtn2.textContent = temp;
+    }
+    function startRecording() {
+        var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = langFrom;
+        recognition.onresult = function(event) {
+            var transcript = event.results[0][0].transcript;
+            document.getElementById('textbox1').value = transcript;
+            translateText(); 
+        };
+        recognition.onend = function() {
+            recognition.stop();
+        };
+        recognition.start();
+    }
+    document.getElementById('button1').addEventListener('click', startRecording);
+    document.getElementById('button2').addEventListener('click', function() {
+        changeLanguage();
+        translateText(); 
+    });
+    function translateText() {
+        var textToTranslate = document.getElementById('textbox1').value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://api.mymemory.translated.net/get", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var translatedText = response.responseData.translatedText;
+                if (translatedText == "NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT") {
+                    translatedText = ""
+                }
+                document.getElementById("textbox2").value = translatedText; 
+            }
+        };
+        var data = "q=" + encodeURIComponent(textToTranslate) + "&langpair=" + langFrom + "|" + langTo;
+        xhr.send(data);
+    }
+    document.getElementById('button3').addEventListener('click', translateText);
+    function changeBackground(background) {
+        var imageUrl = background;
+        document.body.style.backgroundImage = imageUrl;
+    }
+    function toggleDropdown(id) {
+    const dropdownList = document.getElementById(id);
+    dropdownList.classList.toggle('hidden');
+    }
+    function selectItem(element, id, id2) {
+            const dropdownBtn = document.getElementById(id);
+            dropdownBtn.textContent = element.textContent;
+            toggleDropdown(id2);
+        }
+
+         // Получаем все кнопки
+         const buttons = document.querySelectorAll('.button1, .button2, .button3, .button4, .button5, .lang, .colbut, .background, .dropdownbtn1, .dropdownbtn2, .dropdownbtn3, .rus, .eng, .deut, .esp, .turk, .arab');
+        
+        // Получаем элементы списка
+        const colorOptions = document.querySelectorAll('#dropdown-list5 li');
+
+        // Обработчик клика по цветам
+        colorOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const selectedColor = getComputedStyle(option).backgroundColor;
+
+                // Меняем цвет кнопок
+                buttons.forEach(button => {
+                    button.style.backgroundColor = selectedColor;
+                });
+            });
+        });
+
+// Объект с переводами
+const translations = {
+  rus: {
+    button1: "Начать запись",
+    button2: "Сменить язык",
+    button3: "Перевести",
+    rectangle: "Перевод текста на другой язык",
+    lang:"Настройки языка",
+    colbut:"Настройки кнопок",
+    background:"Настройки фона",
+    blue:"Синий", 
+    red:"Красный",
+    green:"Зеленый",
+    yellow:"Желтый",
+    purple:"Фиолетовый",
+    black:"Черный",
+    dropdownbtn3:"Настройки", 
+    textbox1:"Введите текст для перевода",
+    textbox2:"Здесь будет отображаться перевод текста",
+    dropdownbtn1:"Русский",
+    languagebutton1:"Английский",
+    languagebutton2:"Русский",
+    languagebutton3:"Испанский",
+    languagebutton4:"Немецкий",
+    languagebutton5:"Турецкий",
+    languagebutton6:"Арабский",
+    dropdownbtn2:"Английский",
+    languagebutton7:"Английский",
+    languagebutton8:"Русский",
+    languagebutton9:"Испанский",
+    languagebutton10:"Немецкий",
+    languagebutton11:"Турецкий",
+    languagebutton12:"Арабский",
+  },
+  eng: {
+    button1: "Start recording",
+    button2: "Change language",
+    button3: "Translate",
+    rectangle: "Translate text into another language",
+    lang:"Language Settings",
+    colbut:"Button Settings",
+    background:"Background settings",
+    blue:"Blue", 
+    red:"Red",
+    green:"Green",
+    yellow:"Yellow",
+    purple:"Purple",
+    black:"Black",
+    dropdownbtn3:"Settings",
+    textbox1:"Enter the text to translate",
+    textbox2:"The text translation will be displayed here",
+    dropdownbtn1:"Russian",
+    languagebutton1:"English",
+    languagebutton2:"Russian",
+    languagebutton3:"Spanish",
+    languagebutton4:"German",
+    languagebutton5:"Turkish",
+    languagebutton6:"Arabic",
+    dropdownbtn2:"English",
+    languagebutton7:"English",
+    languagebutton8:"Russian",
+    languagebutton9:"Spanish",
+    languagebutton10:"German",
+    languagebutton11:"Turkish",
+    languagebutton12:"Arabic",
+  },
+  deut: {
+    button1: "Aufnahme starten",
+    button2: "Sprache ändern",
+    button3: "Übersetzen",
+    rectangle: "Text in eine andere Sprache übersetzen",
+    lang:"Spracheinstellungen",
+    colbut:"Schaltflächeneinstellungen",
+    background:"Hintergrundeinstellungen",
+    blue:"Blau", 
+    red:"Rot",
+    green:"Grün",
+    yellow:"Gelb",
+    purple:"Lila",
+    black:"Schwarz",
+    dropdownbtn3:"Einstellungen",
+    textbox1:"Geben Sie den zu übersetzenden text ein",
+    textbox2:"Die Übersetzung des textes wird hier angezeigt",
+    dropdownbtn1:"Russisch",
+    languagebutton1:"Englisch",
+    languagebutton2:"Russisch",
+    languagebutton3:"Spanisch",
+    languagebutton4:"Deutsch",
+    languagebutton5:"Türkisch",
+    languagebutton6:"Arabisch",
+    dropdownbtn2:"Englisch",
+    languagebutton7:"Englisch",
+    languagebutton8:"Russisch",
+    languagebutton9:"Spanisch",
+    languagebutton10:"Deutsch",
+    languagebutton11:"Türkisch",
+    languagebutton12:"Arabisch"
+  },
+  esp: {
+    button1: "Iniciar grabación",
+    button2: "Cambiar idioma",
+    button3: "Traducir",
+    rectangle: "Traducir texto a otro idioma",
+    lang:"configuración de idioma",
+    colbut:"Configuración de botones",
+    background:"configuración de fondo",
+    blue:"Azul", 
+    red:"Rojo",
+    green:"Verde",
+    yellow:"Amarillo",
+    purple:"Púrpura",
+    black:"Negro",
+    dropdownbtn3:"Configuración", 
+    textbox1:"Introduzca el texto para traducir",
+    textbox2:"Aquí se mostrará la traducción del texto",
+    dropdownbtn1:"Ruso",
+    languagebutton1:"Inglés",
+    languagebutton2:"Ruso",
+    languagebutton3:"Español",
+    languagebutton4:"Alemán",
+    languagebutton5:"Turco",
+    languagebutton6:"Árabe",
+    dropdownbtn2:"Inglés",
+    languagebutton7:"Inglés",
+    languagebutton8:"Ruso",
+    languagebutton9:"Español",
+    languagebutton10:"Alemán",
+    languagebutton11:"Turco",
+    languagebutton12:"Árabe"
+  },
+  turk: {
+    button1: "Kaydı başlat",
+    button2: "Dili değiştir",
+    button3: "Çevirmek",
+    rectangle: "Metni başka bir dile çevir",
+    lang:"Dil ayarları",
+    colbut:"Düğme ayarları",
+    background:"Arka plan ayarları",
+    blue:"Mavi", 
+    red:"Kırmızı",
+    green:"Yeşil",
+    yellow:"Sarı",
+    purple:"Mor",
+    black:"Siyah",
+    dropdownbtn3:"Ayarlar", 
+    textbox1:"Çevrilecek metni girin",
+    textbox2:"Metnin çevirisi burada görüntülenecek",
+    dropdownbtn1:"Rusça",
+    languagebutton1:"İngilizce",
+    languagebutton2:"Rusça",
+    languagebutton3:"İspanyolca",
+    languagebutton4:"Almanca",
+    languagebutton5:"Türkçe",
+    languagebutton6:"Arapça",
+    dropdownbtn2:"İngilizce",
+    languagebutton7:"İngilizce",
+    languagebutton8:"Rusça",
+    languagebutton9:"İspanyolca",
+    languagebutton10:"Almanca",
+    languagebutton11:"Türkçe",
+    languagebutton12:"Arapça"
+  },
+  arab: {
+    button1: "بدء التسجيل",
+    button2: "تغيير اللغة",
+    button3: "ترجمة",
+    rectangle: "ترجمة النص إلى لغة أخرى",
+    lang:"إعدادات اللغة",
+    colbut:"إعدادات الزر",
+    background:"إعدادات الخلفية",
+    blue:"الأزرق", 
+    red:"الأحمر",
+    green:"الأخضر",
+    yellow:"أصفر",
+    purple:"الأرجواني",
+    black:"أسود",
+    dropdownbtn3:"إعدادات", 
+    textbox1:"دخل النص للترجمة",
+    textbox2:"سيتم عرض ترجمة النص هنا",
+    dropdownbtn1:"الروسية",
+    languagebutton1:"الإنجليزية",
+    languagebutton2:"الروسية",
+    languagebutton3:"الإسبانية",
+    languagebutton4:"الألمانية",
+    languagebutton5:"التركية",
+    languagebutton6:"عربي",
+    dropdownbtn2:"الإنجليزية",
+    languagebutton7:"الإنجليزية",
+    languagebutton8:"الروسية",
+    languagebutton9:"الإسبانية",
+    languagebutton10:"الألمانية",
+    languagebutton11:"التركية",
+    languagebutton12:"عربي"
+    
+  }
+};
+
+// Функция для смены языка
+function changeLanguage1(lang) {
+ // Получаем все кнопки по классу
+ const buttons = document.querySelectorAll('.button1, .button2, .button3, .lang, .colbut, .background, .blue, .red, .green, .yellow, .purple, .black, .rectangle, .dropdownbtn3 ,.textbox1, .textbox2, .languagebutton1, .languagebutton2, .languagebutton3,.languagebutton4, .languagebutton5, .languagebutton6, .dropdownbtn1, .languagebutton7, .languagebutton8, .languagebutton9,.languagebutton10, .languagebutton11, .languagebutton12, .dropdownbtn2');
+ 
+ 
+ // Обновляем текст для всех кнопок на основе выбранного языка
+ buttons.forEach((button) => {
+  if (button.classList.contains('button1')) {
+   button.textContent = translations[lang].button1;
+  } else if (button.classList.contains('button2')) {
+   button.textContent = translations[lang].button2;
+  } else if (button.classList.contains('button3')) {
+   button.textContent = translations[lang].button3;
+  } else if (button.classList.contains('lang')) {
+   button.textContent = translations[lang].lang;
+  } else if (button.classList.contains('colbut')) {
+   button.textContent = translations[lang].colbut;
+  } else if (button.classList.contains('background')) {
+   button.textContent = translations[lang].background;
+  }else if (button.classList.contains('blue')) {
+   button.textContent = translations[lang].blue;
+  } else if (button.classList.contains('red')) {
+   button.textContent = translations[lang].red;
+  } else if (button.classList.contains('green')) {
+   button.textContent = translations[lang].green;
+  } else if (button.classList.contains('yellow')) {
+   button.textContent = translations[lang].yellow;
+  } else if (button.classList.contains('purple')) {
+   button.textContent = translations[lang].purple;
+  }else if (button.classList.contains('black')) {
+   button.textContent = translations[lang].black;
+  }else if (button.classList.contains('yellow')) {
+   button.textContent = translations[lang].yellow;
+  } else if (button.classList.contains('purple')) {
+   button.textContent = translations[lang].purple;
+  }else if (button.classList.contains('black')) {
+   button.textContent = translations[lang].black;
+  }else if (button.classList.contains('dropdownbtn3')) {
+   button.textContent = translations[lang].dropdownbtn3;
+  }else if (button.classList.contains('rectangle')) {
+   button.textContent = translations[lang].rectangle;
+  }else if (button.classList.contains('textbox1')) {
+   button.placeholder = translations[lang].textbox1;
+  }else if (button.classList.contains('textbox2')) {
+   button.placeholder = translations[lang].textbox2;
+  }else if (button.classList.contains('dropdownbtn1')) {
+   button.textContent = translations[lang].dropdownbtn1;
+  }else if (button.classList.contains('languagebutton1')) {
+   button.textContent = translations[lang].languagebutton1;
+  }else if (button.classList.contains('languagebutton2')) {
+   button.textContent = translations[lang].languagebutton2;
+  }else if (button.classList.contains('languagebutton3')) {
+   button.textContent = translations[lang].languagebutton3;
+  }else if (button.classList.contains('languagebutton4')) {
+   button.textContent = translations[lang].languagebutton4;
+  }else if (button.classList.contains('languagebutton5')) {
+   button.textContent = translations[lang].languagebutton5;
+  }else if (button.classList.contains('languagebutton6')) {
+   button.textContent = translations[lang].languagebutton6;
+  }else if (button.classList.contains('dropdownbtn2')) {
+   button.textContent = translations[lang].dropdownbtn2;
+  }else if (button.classList.contains('languagebutton7')) {
+   button.textContent = translations[lang].languagebutton7;
+  }else if (button.classList.contains('languagebutton8')) {
+   button.textContent = translations[lang].languagebutton8;
+  }else if (button.classList.contains('languagebutton9')) {
+   button.textContent = translations[lang].languagebutton9;
+  }else if (button.classList.contains('languagebutton10')) {
+   button.textContent = translations[lang].languagebutton10;
+  }else if (button.classList.contains('languagebutton11')) {
+   button.textContent = translations[lang].languagebutton11;
+  }else if (button.classList.contains('languagebutton12')) {
+   button.textContent = translations[lang].languagebutton12;
+  }
+ });
+ 
+}
+
+// Добавляем обработчики событий на языковые кнопки
+document.querySelectorAll('#dropdown-list4 li').forEach(item => {
+ item.addEventListener('click', () => {
+  const lang = item.className; // Получаем класс элемента, который соответствует языку
+  changeLanguage1(lang);
+ });
+});
+</script>
+</body>
+</html>
